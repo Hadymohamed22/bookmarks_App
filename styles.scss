@@ -9,3 +9,14 @@ $heading-color: #74512d;
     filter: drop-shadow(-1px 4px 0px $main-color);
   }
 }
+tbody {
+  td {
+    &.id {
+      background-color: $heading-color;
+      color: white;
+    }
+    &:not(.id) {
+      border: 1px solid #74512d86;
+    }
+  }
+}

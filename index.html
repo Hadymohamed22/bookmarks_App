@@ -22,23 +22,184 @@
     <!-- main css file -->
     <link rel="stylesheet" href="assets/css/main.css" />
   </head>
-  <body class="bg-bg h-screen flex flex-col justify-center items-center">
-    <div class="title relative">
+  <body class="bg-bg flex flex-col justify-center items-center">
+    <!-- start title section -->
+    <div class="title relative mb-14">
       <img
         src="./assets/images/highlight-text.png"
         alt="text highlight "
-        class="absolute right-[-28px] top-[10px]"
+        class="absolute right-[-20px] top-[15px] md:right-[-28px] md:top-[10px] w-[25px] md:w-auto"
       />
-      <h1 class="text-center py-5 text-heading font-bold text-7xl font-poetsen">
+      <h1
+        class="text-center py-5 text-heading font-bold text-6xl md:text-7xl font-poetsen"
+      >
         BookMarks
       </h1>
       <img
         src="./assets/images/highlight-text.png"
         alt="text highlight "
-        class="absolute left-[-40px] bottom-[-15px] rotate-[190deg]"
-        width="40"
+        class="absolute bottom-[-5px] left-[-28px] md:left-[-40px] md:bottom-[-15px] rotate-[190deg] w-[30px] md:w-[40px]"
       />
     </div>
+    <!-- end title section -->
+
+    <!-- start form to add bookmark -->
+    <form
+      class="w-[95%] mx-3 md:mx-0 md:w-[85%] lg:w-[70%] bg-main/20 p-3 md:p-5 outline-dashed outline-3 outline-offset-4 md:outline-offset-8 outline-heading rounded-xl flex flex-col gap-3 font-cairo"
+    >
+      <input
+        type="text"
+        id="urlLabel"
+        placeholder="URL Label"
+        class="py-3 px-5 rounded-lg bg-main/55 text-heading placeholder:text-heading outline-none transition-all duration-300 focus:shadow-md"
+      />
+      <input
+        type="text"
+        id="urlLink"
+        placeholder="URL Link"
+        class="py-3 px-5 rounded-lg bg-main/55 text-heading placeholder:text-heading outline-none transition-all duration-300 focus:shadow-md"
+      />
+      <div class="buttons grid grid-cols-2 gap-3">
+        <button
+          type="submit"
+          class="col-span-2 order-2 md:order-1 md:col-span-1 py-3 rounded-lg bg-main transititon-all duration-300 hover:bg-[#ba8149] hover:text-white"
+        >
+          Submit
+        </button>
+        <button
+          type="reset"
+          class="col-span-2 order-1 md:order-2 md:col-span-1 py-3 rounded-lg bg-heading text-white transititon-all duration-300 hover:bg-[#ba8149] hover:text-black"
+        >
+          Reset
+        </button>
+      </div>
+    </form>
+    <!-- end form to add bookmark -->
+
+    <!-- start table for preview data -->
+    <div
+      class="overflow-x-auto mt-10 mb-5 w-[95%] mx-3 md:mx-0 md:w-[85%] lg:w-[70%] font-cairo rounded-xl bg-main/20"
+    >
+      <table class="w-full min-w-[450px]">
+        <thead class="font-normal">
+          <tr class="bg-heading text-white">
+            <th class="p-2">ID</th>
+            <th class="p-2">Label</th>
+            <th class="p-2">Url</th>
+            <th class="p-2">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="p-2 text-center id">1</td>
+            <td class="p-2 text-center">google</td>
+            <td class="p-2">https://google.com</td>
+            <td class="p-2">
+              <div class="actions flex gap-3 justify-center items-center">
+                <button
+                  class="py-1 px-5 rounded-md shadow-lg transition-all duration-300 bg-main hover:bg-[#e4b23d] border border-black"
+                >
+                  <i class="fa-solid fa-pen-to-square"></i>
+                  <span>Edit</span>
+                </button>
+                <button
+                  class="py-1 px-5 rounded-md text-white shadow-lg transition-all duration-300 bg-red-600 hover:bg-red-700 border border-black"
+                >
+                  <i class="fa-solid fa-trash"></i>
+                  <span>Delete</span>
+                </button>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td class="p-2 text-center id">1</td>
+            <td class="p-2 text-center">google</td>
+            <td class="p-2">https://google.com</td>
+            <td class="p-2">
+              <div class="actions flex gap-3 justify-center items-center">
+                <button
+                  class="py-1 px-5 rounded-md shadow-lg transition-all duration-300 bg-main hover:bg-[#e4b23d] border border-black"
+                >
+                  <i class="fa-solid fa-pen-to-square"></i>
+                  <span>Edit</span>
+                </button>
+                <button
+                  class="py-1 px-5 rounded-md text-white shadow-lg transition-all duration-300 bg-red-600 hover:bg-red-700 border border-black"
+                >
+                  <i class="fa-solid fa-trash"></i>
+                  <span>Delete</span>
+                </button>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td class="p-2 text-center id">1</td>
+            <td class="p-2 text-center">google</td>
+            <td class="p-2">https://google.com</td>
+            <td class="p-2">
+              <div class="actions flex gap-3 justify-center items-center">
+                <button
+                  class="py-1 px-5 rounded-md shadow-lg transition-all duration-300 bg-main hover:bg-[#e4b23d] border border-black"
+                >
+                  <i class="fa-solid fa-pen-to-square"></i>
+                  <span>Edit</span>
+                </button>
+                <button
+                  class="py-1 px-5 rounded-md text-white shadow-lg transition-all duration-300 bg-red-600 hover:bg-red-700 border border-black"
+                >
+                  <i class="fa-solid fa-trash"></i>
+                  <span>Delete</span>
+                </button>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td class="p-2 text-center id">1</td>
+            <td class="p-2 text-center">google</td>
+            <td class="p-2">https://google.com</td>
+            <td class="p-2">
+              <div class="actions flex gap-3 justify-center items-center">
+                <button
+                  class="py-1 px-5 rounded-md shadow-lg transition-all duration-300 bg-main hover:bg-[#e4b23d] border border-black"
+                >
+                  <i class="fa-solid fa-pen-to-square"></i>
+                  <span>Edit</span>
+                </button>
+                <button
+                  class="py-1 px-5 rounded-md text-white shadow-lg transition-all duration-300 bg-red-600 hover:bg-red-700 border border-black"
+                >
+                  <i class="fa-solid fa-trash"></i>
+                  <span>Delete</span>
+                </button>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td class="p-2 text-center id">1</td>
+            <td class="p-2 text-center">google</td>
+            <td class="p-2">https://google.com</td>
+            <td class="p-2">
+              <div class="actions flex gap-3 justify-center items-center">
+                <button
+                  class="py-1 px-5 rounded-md shadow-lg transition-all duration-300 bg-main hover:bg-[#e4b23d] border border-black"
+                >
+                  <i class="fa-solid fa-pen-to-square"></i>
+                  <span>Edit</span>
+                </button>
+                <button
+                  class="py-1 px-5 rounded-md text-white shadow-lg transition-all duration-300 bg-red-600 hover:bg-red-700 border border-black"
+                >
+                  <i class="fa-solid fa-trash"></i>
+                  <span>Delete</span>
+                </button>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!-- end table for preview data -->
+
     <!-- font awesome js file  -->
     <script src="assets/js/all.min.js"></script>
     <!-- main js file -->
