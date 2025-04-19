@@ -60,12 +60,13 @@
         class="py-3 px-5 rounded-lg bg-main/55 text-heading placeholder:text-heading outline-none transition-all duration-300 focus:shadow-md"
       />
       <div class="buttons grid grid-cols-2 gap-3">
-        <button
-          type="submit"
-          class="col-span-2 order-2 md:order-1 md:col-span-1 py-3 rounded-lg bg-main transititon-all duration-300 hover:bg-[#ba8149] hover:text-white"
-        >
-          Submit
-        </button>
+        <div id="submitBtn" class="col-span-2 order-2 md:order-1 md:col-span-1">
+          <button
+            class="w-full py-3 rounded-lg bg-main transititon-all duration-300 hover:bg-[#ba8149] hover:text-white"
+          >
+            Add
+          </button>
+        </div>
         <button
           type="reset"
           class="col-span-2 order-1 md:order-2 md:col-span-1 py-3 rounded-lg bg-heading text-white transititon-all duration-300 hover:bg-[#ba8149] hover:text-black"
@@ -89,8 +90,8 @@
             <th class="p-2">Actions</th>
           </tr>
         </thead>
-        <tbody>
-          <tr>
+        <tbody id="tbody">
+          <!-- <tr>
             <td class="p-2 text-center id">1</td>
             <td class="p-2 text-center">google</td>
             <td class="p-2">https://google.com</td>
@@ -194,7 +195,7 @@
                 </button>
               </div>
             </td>
-          </tr>
+          </tr> -->
         </tbody>
       </table>
     </div>
