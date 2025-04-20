@@ -4,7 +4,17 @@ urlLink = document.getElementById("urlLink"),
 urlLabel = document.getElementById("urlLabel"),
 submitBtn = document.getElementById("submitBtn");
 
+check_localStorage();
 updateTable(bookMarks);
+
+// check local storage ()
+function check_localStorage(){
+  if(localStorage.bookMarks){
+    bookMarks = JSON.parse(localStorage.bookMarks)
+  }else{
+    localStorage.setItem("bookMarks",JSON.stringify(bookMarks))
+  }
+}
 
 // stop send form
 document.querySelector("form").addEventListener("submit",(e)=>{
@@ -20,6 +30,7 @@ function add(){
         urlLabel.value = "";
         urlLink.value = "";
         updateTable(bookMarks);
+        localStorage.setItem("bookMarks", JSON.stringify(bookMarks));
     }
 }
 document.querySelector("#submitBtn button").addEventListener("click",add);
@@ -92,6 +103,7 @@ function edit(index){
     urlLabel.value = "";
     urlLink.value = "";
         updateTable(bookMarks);
+        localStorage.setItem("bookMarks", JSON.stringify(bookMarks));
     }
 }
 
@@ -103,5 +115,6 @@ function delete_bookmark(e,index){
     setTimeout(() => {
         bookMarks = bookMarks.filter((e,i) => i !== index);
     updateTable(bookMarks)
+    localStorage.setItem("bookMarks", JSON.stringify(bookMarks));
     }, 2000);
 }
